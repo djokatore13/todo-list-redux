@@ -26,6 +26,7 @@
     &-add-btn {
       border: 1px solid #333333;
       border-radius: 10px;
+      color: #333333;
     }
     &-input {
       width: 60%;
@@ -33,10 +34,13 @@
       padding: 10px;
       outline: none;
       font-size: 16px;
+      background-color: #f2f2f2;
     }
     &-add-btn {
       width: 30%;
       font-size: 16px;
+      background-color: #cce7fa;
+      transition: all .5s;
       
       &:hover {
         background-color: #333333;
