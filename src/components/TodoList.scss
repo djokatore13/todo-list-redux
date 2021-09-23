@@ -1,0 +1,52 @@
+.todo-list {
+  padding: 0;
+  list-style: none;
+  width: 100%;
+
+  &__item {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &--success {
+      background-color: #76b785;
+      color: #155724;
+      
+      .todo-list__item-text {
+        font-style: italic;
+        font-weight: bold;
+        text-decoration: line-through;
+        text-decoration-color: #333333;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-text {
+      // todo
+    }
+    &-checkbox {
+      margin-right: 10px;
+    }
+    &-btn {
+      padding: 5px 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #dc3545;
+      background-color: #dc3545;
+      color: #f2f2f2;
+
+      &:hover {
+        background-color: #f3253a;
+        transition: all .5s;
+      }
+    }
+  }
+}
