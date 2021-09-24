@@ -9,7 +9,7 @@ export default function TodoForm() {
 
   const onSubmit = (event) => {
 		event.preventDefault();
-		console.log('user entered: ' + value);
+		console.log('user entered: ', value);
 	};
 
   return (
