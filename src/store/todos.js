@@ -6,9 +6,16 @@ const slice = createSlice({
   initialState: todosData,
   reducers: {
     // Here goes reducers
+    addedTodo: (state, action) => {
+      const newTodo = {
+        id: Date.now(),
+        title: action.payload.title,
+        completed: false
+      }
+      state.push(newTodo)
+    }
   }
 })
 
-// Uncommnt this line when we create reducers, and export them inside parentheses
-// export const {} = slice.actions
+export const { addedTodo } = slice.actions
 export default slice.reducer;

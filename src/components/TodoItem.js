@@ -1,4 +1,5 @@
 import React from "react"
+import deleteImg from "../assets/images/delete.png"
 
 export default function TodoItem({ id, title, completed }) {
   return (
@@ -12,7 +13,9 @@ export default function TodoItem({ id, title, completed }) {
           />
 					{title}
 				</span>
-				<button className="todo-list__item-btn">Delete</button>
+				<button className="todo-list__item-btn">
+          <img src={deleteImg} alt="Delete" />
+        </button>
 			</div>
 		</li>
   )
