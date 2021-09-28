@@ -10,10 +10,11 @@ export default function TodoForm() {
   const [value, setValue] = useState('');
   const dispatch = useDispatch()
 
-  const onSubmit = (event) => {
-		event.preventDefault();
+  const onSubmit = (e) => {
+		e.preventDefault();
 		console.log('user entered: ', value);
     dispatch(addedTodo({ title: value }))
+    setValue(''); // clear input filed after submit
 	};
 
   return (
@@ -27,7 +28,7 @@ export default function TodoForm() {
             className="todo__form-input"
             placeholder="Add todo..."
             value={value}
-            onChange={(event) => setValue(event.target.value)}
+            onChange={(e) => setValue(e.target.value)}
           />
           <button type="submit" className="todo__form-add-btn">
             Add new todo

@@ -10,6 +10,7 @@
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
+    transition: all .4s;
 
     &:last-child {
       margin-bottom: 0;
@@ -17,6 +18,8 @@
     &--success {
       background-color: #76b785;
       color: #155724;
+      transition: all .4s;
+      
       
       .todo-list__item-text {
         font-style: italic;

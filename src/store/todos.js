@@ -13,9 +13,16 @@ const slice = createSlice({
         completed: false
       }
       state.push(newTodo)
+    },
+    toggledCompletedTodo: (state, action) => {
+      const index = state.findIndex((todo) => todo.id === action.payload.id)
+      state[index].completed = action.payload.completed
+    },
+    deletedTodo: (state, action) => {
+      return state.filter(todo => todo.id !== action.payload.id)
     }
   }
 })
 
-export const { addedTodo } = slice.actions
+export const { addedTodo, toggledCompletedTodo, deletedTodo } = slice.actions
 export default slice.reducer;
